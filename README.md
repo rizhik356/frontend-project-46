@@ -5,6 +5,5 @@
 
 ```bash
 
-```
 
 <a href="https://asciinema.org/a/YOkp2MNexM47KmtFfUpbhliMi" target="_blank"><img src="https://asciinema.org/a/YOkp2MNexM47KmtFfUpbhliMi.svg" /></a>
