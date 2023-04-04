@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/rizhik356/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/rizhik356/frontend-project-46/actions)
+[![build-check](https://github.com/rizhik356/frontend-project-46/actions/workflows/build-check.yml/badge.svg)](https://github.com/rizhik356/frontend-project-46/actions/workflows/build-check.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ce2983a489336d5b529d/maintainability)](https://codeclimate.com/github/rizhik356/frontend-project-46/maintainability)
 
 #### Get Differents
