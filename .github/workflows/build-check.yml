@@ -25,6 +25,3 @@ jobs:
         uses: paambaati/codeclimate-action@v3.2.0
         env:
           CC_TEST_REPORTER_ID: ${{secrets.COVERAGE_ID}}
-        with:
-          coverageCommand: npm run coverage
-          debug: true
