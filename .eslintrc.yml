@@ -6,6 +6,7 @@ plugins:
 extends: 
   - 'airbnb-base'
   - 'plugin:jest/recommended'
+  - 'js-yaml'
 overrides: []
 parserOptions:
   ecmaVersion: latest

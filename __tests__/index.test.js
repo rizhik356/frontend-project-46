@@ -2,6 +2,7 @@ import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 import fs from 'fs';
 import getDifferent from '../src/index.js';
+import { expect } from '@jest/globals';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -10,8 +11,19 @@ const readFile = (pathfile) => fs.readFileSync(pathfile, 'utf-8');
 
 const file1 = getFixturePath('file1.json');
 const file2 = getFixturePath('file2.json');
-const testfile = getFixturePath('test-json.txt');
+const file3 = getFixturePath('file1.yaml');
+const file4 = getFixturePath('file2.yaml');
+const testfile = getFixturePath('test-file.txt');
 
-test('comparison test', () => {
+test('comparison test(JSON)', () => {
   expect(getDifferent(file1, file2) === readFile(testfile)).toBe(true);
 });
+
+test('comparison test(YAML)', () => {
+  expect(getDifferent(file3, file4) === readFile(testfile)).toBe(true);
+});
+
+test('invalid file type', () => {
+  expect(() => {getDifferent(file1, testfile)}).toThrow('Invalid file type');
+});
+

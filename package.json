@@ -1,14 +1,14 @@
 {
   "name": "@hexlet/code",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "[![Actions Status](https://github.com/rizhik356/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/rizhik356/frontend-project-46/actions)",
   "main": "src/index.js",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "add": "^2.0.6",
     "commander": "^10.0.0",
     "lodash": "^4.17.21",
+    "js-yaml": "^4.1.0",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
