@@ -1,8 +1,8 @@
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 import fs from 'fs';
-import getDifferent from '../src/index.js';
 import { expect } from '@jest/globals';
+import getDifferent from '../src/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,6 +24,5 @@ test('comparison test(YAML)', () => {
 });
 
 test('invalid file type', () => {
-  expect(() => {getDifferent(file1, testfile)}).toThrow('Invalid file type');
+  expect(() => { getDifferent(file1, testfile); }).toThrow('Invalid file type');
 });
-
