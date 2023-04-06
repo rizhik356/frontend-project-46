@@ -17,7 +17,7 @@ const comparisonRules = (file1, file2) => {
       result.push(`\n - ${key}: ${file1[key]}`);
     }
   });
-  return `{${result.join('')}\n}`;
+  return `\n{${result.join('')}\n}`;
 };
 
 export default comparisonRules;
