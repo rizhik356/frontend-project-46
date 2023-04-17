@@ -7,7 +7,7 @@ const program = new Command();
 program
   .description('Compares two configuration files and shows a difference.')
   .arguments('<filepath1> <filepath2>')
-  .option('-f, --format <type>', 'output format')
-  .version('0.0.4')
+  .option('-f, --format <type>', 'output format', 'stylish')
+  .version('0.0.6')
   .action((filepath1, filepath2) => console.log(getDifferent(filepath1, filepath2)));
 program.parse();
