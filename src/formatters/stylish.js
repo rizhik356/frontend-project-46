@@ -5,14 +5,15 @@ const stringify = (node, depth) => {
     return `${node}`;
   }
 
-  const result = [];
-  const entries = Object.entries(node);
-  entries.map(([key, value]) => {
-    const line = `${ident(depth + 1)}${key}: ${stringify(value, depth + 1)}\n`;
-    result.push(line);
-    return result;
-  });
-  return `{\n${result.join('')}${ident(depth)}}`;
+  const lines = Object
+    .entries(node)
+    .map(([key, value]) => `${ident(depth + 1)}${key}: ${stringify(value, depth + 1)}`);
+
+  return [
+    '{',
+    ...lines,
+    `${ident(depth)}}`,
+  ].join('\n');
 };
 
 const stylish = (innerTree) => {
