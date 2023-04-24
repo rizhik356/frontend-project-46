@@ -11,11 +11,11 @@ const plain = (tree) => {
     const fullPath = (depth === '') ? `${obj.name}` : `${depth}.${obj.name}`;
     switch (obj.status) {
       case 'added':
-        return `\nProperty '${fullPath}' was added with value: ${stylizator(obj.value)}`;
+        return `Property '${fullPath}' was added with value: ${stylizator(obj.value)}\n`;
       case 'deleted':
-        return `\nProperty '${fullPath}' was removed`;
+        return `Property '${fullPath}' was removed\n`;
       case 'different values':
-        return `\nProperty '${fullPath}' was updated. From ${stylizator(obj.value1)} to ${stylizator(obj.value2)}`;
+        return `Property '${fullPath}' was updated. From ${stylizator(obj.value1)} to ${stylizator(obj.value2)}\n`;
       case 'object':
         return iter(obj.value, fullPath).join('');
       case 'unchanged':
