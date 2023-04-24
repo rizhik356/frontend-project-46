@@ -8,23 +8,28 @@
 
 compares 2 files and displays the result in the selected format
 
-## Installation
+* [Installation](#Install)
+* [Input Format](#Input)
+* [Output Format](#Output)
+* [Help](#Help)
+
+## Installation <a name="Install">
 ```bash
 make install
 ```
 
-## Format type of input files
+## Format type of input files <a name="Input">
 
 Gendiff 0.0.8 supports : ```JSON```, ```Yaml```
 
-## Type of output files
+## Type of output files <a name="Output">
 
 Gendiff 0.0.8 can returns the result of comparasion in 3 formats:
 * Stylish (default value)
 * Plain
 * JSON 
 
-## Help
+## Help <a name="Help">
 The help option ```-h, --help```
 ```bash
 Usage: gendiff [options] <filepath1> <filepath2>
