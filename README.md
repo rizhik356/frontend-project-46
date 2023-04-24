@@ -33,3 +33,10 @@ Working gendiff with formatter plain on nested files
 
 
 <a href="https://asciinema.org/a/XKLnaAmRyDMhNaXpUJOz1x0OE" target="_blank"><img src="https://asciinema.org/a/XKLnaAmRyDMhNaXpUJOz1x0OE.svg" /></a>
+
+```bash
+Working gendiff with formatter json on nested files
+```
+
+
+<a href="https://asciinema.org/a/ZM5WtvcmSykeN40QyYxS2XXW4" target="_blank"><img src="https://asciinema.org/a/ZM5WtvcmSykeN40QyYxS2XXW4.svg" /></a>
