@@ -26,3 +26,10 @@ Working gendiff with formatter stylish on plain and nested files
 
 
 <a href="https://asciinema.org/a/JuRCXT2CUISnS1G0Qh8SPam8B" target="_blank"><img src="https://asciinema.org/a/JuRCXT2CUISnS1G0Qh8SPam8B.svg" /></a>
+
+```bash
+Working gendiff with formatter plain on nested files
+```
+
+
+<a href="https://asciinema.org/a/XKLnaAmRyDMhNaXpUJOz1x0OE" target="_blank"><img src="https://asciinema.org/a/XKLnaAmRyDMhNaXpUJOz1x0OE.svg" /></a>
