@@ -41,7 +41,6 @@ Options:
   -V, --version        output the version number
   -h, --help           display help for command
 ```
-<a name="Help"><h2>Working gendiff with formatter json on nested files</h2></a>
 
 ## Compare of 2 files
 ```gendiff <filepath1> <filepath2>```
