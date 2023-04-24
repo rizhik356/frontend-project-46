@@ -6,30 +6,30 @@
 
 ## GenDiff
 
-compares 2 files and displays the result in the selected format
+Gendiff compares 2 different files and displays the result in the selected format
 
 * [Installation](#Install)
 * [Input Format](#Input)
 * [Output Format](#Output)
 * [Help](#Help)
 
-## Installation <a name="Install">
+ <a name="Install"><h2>Installation</h2></a>
 ```bash
 make install
 ```
 
-## Format type of input files <a name="Input">
+<a name="Input"><h2>Format type of input files</h2></a>
 
 Gendiff 0.0.8 supports : ```JSON```, ```Yaml```
 
-## Type of output files <a name="Output">
+<a name="Output"><h2>Type of output files</h2></a>
 
 Gendiff 0.0.8 can returns the result of comparasion in 3 formats:
-* Stylish (default value)
-* Plain
-* JSON 
+* [Stylish (default value)](#Stylish)
+* [Plain](#Plain)
+* [JSON](#JSON)
 
-## Help <a name="Help">
+<a name="Help"><h2>Help</h2></a>
 The help option ```-h, --help```
 ```bash
 Usage: gendiff [options] <filepath1> <filepath2>
@@ -41,6 +41,7 @@ Options:
   -V, --version        output the version number
   -h, --help           display help for command
 ```
+<a name="Help"><h2>Working gendiff with formatter json on nested files</h2></a>
 
 ## Compare of 2 files
 ```gendiff <filepath1> <filepath2>```
@@ -52,19 +53,19 @@ Options:
 
 <a href="https://asciinema.org/a/5nR18rI4zC7ek2DslhjxmgTwJ" target="_blank"><img src="https://asciinema.org/a/5nR18rI4zC7ek2DslhjxmgTwJ.svg" /></a>
 
-## Working gendiff with formatter stylish on plain and nested files
+<a name="Stylish"><h2>Working gendiff with formatter stylish on plain and nested files</h2></a>
 ```gendiff -f stylish <filepath1> <filepath2>```, or ```gendiff <filepath1> <filepath2>```
 
 
 <a href="https://asciinema.org/a/JuRCXT2CUISnS1G0Qh8SPam8B" target="_blank"><img src="https://asciinema.org/a/JuRCXT2CUISnS1G0Qh8SPam8B.svg" /></a>
 
-## Working gendiff with formatter plain on nested files
+<a name="Plain"><h2>Working gendiff with formatter plain on nested files</h2></a>
 ```gendiff -f plain <filepath1> <filepath2>```
 
 
 <a href="https://asciinema.org/a/XKLnaAmRyDMhNaXpUJOz1x0OE" target="_blank"><img src="https://asciinema.org/a/XKLnaAmRyDMhNaXpUJOz1x0OE.svg" /></a>
 
-## Working gendiff with formatter json on nested files
+<a name="JSON"><h2>Working gendiff with formatter json on nested files</h2></a>
 ```gendiff -f json <filepath1> <filepath2>```
 
 
