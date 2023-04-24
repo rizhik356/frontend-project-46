@@ -1,3 +1,13 @@
-const format = (tree, formatter) => formatter(tree);
+import stylish from './stylish.js';
+import plain from './plain.js';
+
+const format = (tree, formatter) => {
+  if (formatter === 'stylish') {
+    return stylish(tree);
+  } if (formatter === 'plain') {
+    return plain(tree);
+  }
+  throw new Error(`Invalid type format: ${formatter}`);
+};
 
 export default format;

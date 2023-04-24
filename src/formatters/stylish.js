@@ -1,10 +1,8 @@
 const ident = (depth, spaceCount = 4, leftIndentation = 0) => ' '.repeat(spaceCount * depth - leftIndentation);
 
 const stringify = (node, depth) => {
-  if (typeof node !== 'object') {
+  if (typeof node !== 'object' || node === null) {
     return `${node}`;
-  } if (node === null) {
-    return null;
   }
 
   const result = [];
