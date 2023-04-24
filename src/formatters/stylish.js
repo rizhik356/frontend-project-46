@@ -1,4 +1,4 @@
-const ident = (depth, spaceCount = 4, leftIndentation = 0) => ' '.repeat(spaceCount * depth - leftIndentation);
+const indent = (depth, spaceCount = 4, leftIndentation = 0) => ' '.repeat(spaceCount * depth - leftIndentation);
 
 const stringify = (node, depth) => {
   if (typeof node !== 'object' || node === null) {
@@ -7,18 +7,18 @@ const stringify = (node, depth) => {
 
   const lines = Object
     .entries(node)
-    .map(([key, value]) => `${ident(depth + 1)}${key}: ${stringify(value, depth + 1)}`);
+    .map(([key, value]) => `${indent(depth + 1)}${key}: ${stringify(value, depth + 1)}`);
 
   return [
     '{',
     ...lines,
-    `${ident(depth)}}`,
+    `${indent(depth)}}`,
   ].join('\n');
 };
 
 const stylish = (innerTree) => {
   const iter = (tree, depth) => tree.map((node) => {
-    const getValue = (value, sign) => `${ident(depth, 4, 2)}${sign} ${node.name}: ${stringify(value, depth)}\n`;
+    const getValue = (value, sign) => `${indent(depth, 4, 2)}${sign} ${node.name}: ${stringify(value, depth)}\n`;
     switch (node.status) {
       case 'added':
         return getValue(node.value, '+');
@@ -29,7 +29,7 @@ const stylish = (innerTree) => {
       case 'different values':
         return `${getValue(node.value1, '-')}${getValue(node.value2, '+')}`;
       case 'object':
-        return `${ident(depth, 4, 2)}  ${node.name}: {\n${iter(node.value, depth + 1).join('')}${ident(depth)}}\n`;
+        return `${indent(depth, 4, 2)}  ${node.name}: {\n${iter(node.value, depth + 1).join('')}${indent(depth)}}\n`;
       default:
         throw new Error(`Invalid type of status: ${node.status}`);
     }

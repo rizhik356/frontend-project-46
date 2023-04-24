@@ -22,7 +22,7 @@ test('comparison test(YAML)', () => {
 });
 
 test('comparison(JSON)', () => {
-  expect(getDifferent(file1, file2, 'stylish')).toEqual(readFile(testStylishfile));
+  expect(getDifferent(file1, file2, 'sTyLish')).toEqual(readFile(testStylishfile));
 });
 
 test('invalid file type', () => {
