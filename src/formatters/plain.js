@@ -11,20 +11,20 @@ const plain = (tree) => {
     const fullPath = (depth === '') ? `${obj.name}` : `${depth}.${obj.name}`;
     switch (obj.status) {
       case 'added':
-        return `Property '${fullPath}' was added with value: ${stylizator(obj.value)}\n`;
+        return `Property '${fullPath}' was added with value: ${stylizator(obj.value)}`;
       case 'deleted':
-        return `Property '${fullPath}' was removed\n`;
+        return `Property '${fullPath}' was removed`;
       case 'different values':
-        return `Property '${fullPath}' was updated. From ${stylizator(obj.value1)} to ${stylizator(obj.value2)}\n`;
+        return `Property '${fullPath}' was updated. From ${stylizator(obj.value1)} to ${stylizator(obj.value2)}`;
       case 'object':
-        return iter(obj.value, fullPath).join('');
+        return iter(obj.value, fullPath);
       case 'unchanged':
         return [];
       default:
-        throw new Error(`Invalid type of status: ${obj.status}\n`);
+        throw new Error(`Invalid type of status: ${obj.status}`);
     }
   });
-  return iter(tree, '').join('');
+  return iter(tree, '').join('\n');
 };
 
 export default plain;
